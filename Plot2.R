@@ -18,7 +18,7 @@ data$Date <- as.Date(data$Date,"%d/%m/%Y")
 png(filename="plot2.png",width = 480, height = 480, units = "px")
 #windows()
 
-with(data,plot(Time, Global_active_power, xlab="", ylab="Global Active Power (kW)", type="l"))
+with(data,plot(Time, Global_active_power, xlab="", ylab="Global Active Power (kilowatts)", type="l"))
 
 #Graph Complete, close graphics device
 dev.off()

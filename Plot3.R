@@ -19,7 +19,7 @@ png(filename="plot3.png",width = 480, height = 480, units = "px")
 #windows()
 
 #initial plot
-with(data,plot(Time, Sub_metering_1,col="black", xlab="", ylab="Global Active Power (kW)", type="l"))
+with(data,plot(Time, Sub_metering_1,col="black", xlab="", ylab="Energy sub metering", type="l"))
 #use lines for second two to overlay
 with(data,lines(Time, Sub_metering_2,col="red",  type="l"))
 with(data,lines(Time, Sub_metering_3,col="blue", type="l"))

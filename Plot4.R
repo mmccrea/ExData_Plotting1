@@ -21,16 +21,16 @@ png(filename="plot4.png",width = 480, height = 480, units = "px")
 par(mfrow=c(2,2))
 
 #create plots
-with(data,plot(Time, Global_active_power, xlab="", ylab="Global Active Power (kW)", type="l"))
+with(data,plot(Time, Global_active_power, xlab="", ylab="Global Active Power?", type="l"))
 
 with(data,plot(Time, Voltage, xlab="datetime", ylab="Voltage", type="l"))
 
-with(data,plot(Time, Sub_metering_1,col="black", xlab="", ylab="Global Active Power (kW)", type="l"))
+with(data,plot(Time, Sub_metering_1,col="black", xlab="", ylab="Energy sub metering", type="l"))
 #use lines for second two to overlay
 with(data,lines(Time, Sub_metering_2,col="red",  type="l"))
 with(data,lines(Time, Sub_metering_3,col="blue", type="l"))
 #Create legend
-legend("topright",lty=c(1,1,1), col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"))
+legend("topright",lty=c(1,1,1), col=c("black","red","blue"), legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),bty="n")
 
 
 with(data,plot(Time, Global_reactive_power, xlab="datetime", ylab="Global_reactive_power", type="l"))
